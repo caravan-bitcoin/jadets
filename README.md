@@ -5,20 +5,19 @@ A TypeScript client for the Blockstream Jade hardware wallet, modeled on [jadepy
 ## Install
 
 ```bash
-npm install jadets
+npm install @caravan/jadets
 # or
-yarn add jadets
-his is an npm package written using typescript to talk to the jade hardware device
+yarn add @caravan/jadets
 ```
 
 ## Quickstart
 
 ```
-import { TCPTransport } from 'jadets/transport'
-import { JadeInterface } from 'jadets/interfaces'
-import { Jade } from 'jadets'
+import { TCPTransport } from '@caravan/jadets/transport'
+import { JadeInterface } from '@caravan/jadets/interfaces'
+import { Jade } from '@caravan/jadets'
 import { randomBytes } from 'crypto'
-import { SignerDescriptor, MultisigDescriptor } from 'jadets/types'
+import { SignerDescriptor, MultisigDescriptor } from '@caravan/jadets/types'
 
 const transport = new TCPTransport('localhost', 30121)
 const client    = new Jade(new JadeInterface(transport))

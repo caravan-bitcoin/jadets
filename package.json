@@ -1,10 +1,9 @@
 {
-	"name": "jadets",
-	"version": "1.1.20",
+	"name": "@caravan/jadets",
+	"version": "1.1.21",
 	"description": "jade impl in typescript",
 	"publishConfig": {
-		"access": "public",
-		"tag": "next"
+		"access": "public"
 	},
 	"keywords": [
 		"jade",
@@ -28,20 +27,21 @@
 		"build": "tsup",
 		"clean": "rm -rf node_modules package-lock.json",
 		"clean:build": "rm -rf dist build out",
+		"test": "mocha -r ts-node/register tests/jade_interface.spec.ts",
 		"test:e2e": "mocha --loader ts-node/esm test/**/*.spec.ts",
 		"demo": "ts-node src/temp/demo.ts",
 		"demo:web": "npm run build && node demo/server.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Austin-Fulbright/jadets.git"
+		"url": "git+https://github.com/caravan-bitcoin/jadets.git"
 	},
 	"author": "Austin Fulbright austinfulbright@gmail.com",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Austin-Fulbright/jadets/issues"
+		"url": "https://github.com/caravan-bitcoin/jadets/issues"
 	},
-	"homepage": "https://github.com/Austin-Fulbright/jadets#readme",
+	"homepage": "https://github.com/caravan-bitcoin/jadets#readme",
 	"devDependencies": {
 		"@types/jest": "^29.5.14",
 		"@types/mocha": "^10.0.10",
